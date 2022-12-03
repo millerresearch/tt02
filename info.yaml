@@ -1,7 +1,7 @@
 --- 
 # TinyTapeout project information
 project:
-  wokwi_id:    0        # If using wokwi, set this to your project's ID
+  wokwi_id:    349870920122237523       # If using wokwi, set this to your project's ID
 #  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
 #    - counter.v
 #    - decoder.v
@@ -14,12 +14,12 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       ""      # Your name
+  author:       "Richard Miller"      # Your name
   discord:      ""      # Your discord handle - make sure to include the # part as well
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  title:        "7 Segments Random Walk"      # Project title
+  description:  "Random walk around the seven segments"      # Short description of what your project does
+  how_it_works: "FSM driven by an 8-bit LFSR, with a clock divider"      # Longer description of how the project works
+  how_to_test:  "Set the top 4 DIP switches to number N to divide the clock by 2^N"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  ""      # Describe any external hardware needed
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
@@ -27,13 +27,13 @@ documentation:
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
     - clock
-    - reset
     - none
     - none
     - none
-    - none
-    - none
-    - none
+    - clock divider bit 3 (MSB)
+    - clock divider bit 2
+    - clock divider bit 1
+    - clock divider bit 0
   outputs:
     - segment a         # a description of what the outputs do
     - segment b
